@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -15,7 +15,7 @@ body {
     overflow: hidden;
 }
 
-.start{
+.start {
     position: absolute;
     top: 0;
     left: 0;
@@ -30,34 +30,39 @@ body {
     transform: scale(1);
 }
 
-.maximize{
+.maximize {
     opacity: 0;
-    transform: scale(10);
 }
 
-.out{
+.out {
     display: none;
 }
 
-.logoStart{
+.logoStart {
     width: 250px;
-    animation: start 3s ease-in-out ;
+    animation: start 3s ease-in-out;
 }
 
 @keyframes start {
-    0%{
+    0% {
         transform: scale(1);
     }
-    10%{
+    10% {
         transform: scale(0.8);
     }
-    20%{
+    20% {
         transform: scale(1);
     }
-    30%{
+    30% {
         transform: scale(0.8);
     }
-    40%{
+    40% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    60% {
         transform: scale(1);
     }
 }
@@ -324,19 +329,47 @@ section {
     display: none;
 }
 
+.mobiFb {
+    display: none;
+}
+
 @media screen and (max-width: 1240px) {
     .header {
         position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-    .header__languageFb__pl, .header__languageFb__pl{
-        margin-bottom: 15px;
+
+    .header__noLogo {
+        align-items: center;
+        justify-content: center;
     }
-    .header__languageFb__fb{
-        margin-top: 0;
+
+    .header__languageFb {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 40px;
     }
+
+    .header__languageFb__pl, .header__languageFb__en {
+        margin: 15px 10px;
+    }
+
+    .header__languageFb__pl img, .header__languageFb__en img {
+        width: 75%;
+        height: 75%;
+    }
+
+    .header__languageFb__fb {
+        display: none;
+    }
+
     .header__languageFb__fb:hover {
         animation: none;
     }
+
     section {
         margin: 10px;
         background-position-x: center;
@@ -350,6 +383,7 @@ section {
         margin-left: 0;
         align-items: center;
         margin-bottom: 60px;
+        margin-top: 200px;
     }
 
     .header__contact {
@@ -357,14 +391,24 @@ section {
     }
 
     .nav {
-        width: 90%;
+        width: 100%;
         justify-content: center;
         align-items: center;
+    }
+
+    .nav__moment {
+        font-size: 12px;
+        padding: 3px 7px;
     }
 
     .nav__main, .nav__second, .nav__third {
         justify-content: space-around;
         align-items: center;
+    }
+
+    .nav__main {
+        font-size: 40px;
+        width: 100%;
     }
 
     .nav__second {
@@ -378,7 +422,6 @@ section {
     .buttons {
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
         margin-top: 40px;
         flex-direction: row;
         width: 90%;
@@ -405,14 +448,14 @@ section {
     }
 
     .buttons__regulamin, .buttons__katalog {
-        margin: 10px 20px;
+        margin: 10px 10px;
         min-width: 150px;
     }
 
     .contact__mobi {
         font-family: 'Montserrat', sans-serif;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         width: 70%;
         max-width: 480px;
@@ -429,7 +472,7 @@ section {
 
     .contact__mobi__biuro h4, .contact__mobi__manager h4, .contact__mobi__projektant h4 {
         font-size: 12px;
-        font-weight: 500;
+        font-weight: 700;
         margin-bottom: 7px;
     }
 
@@ -445,37 +488,95 @@ section {
     .contact__biuro a:hover, .contact__manager a:hover, .contact__projektant a:hover {
         color: #ffffff;
     }
+
+    .mobiFb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 40px;
+        margin-bottom: 20px;
+    }
+
+    .mobiFb img {
+        width: 20%;
+    }
 }
 
-@media screen and (max-width: 540px){
-    .main{
+@media screen and (max-width: 630px) {
+    .header__logo img{
+        width: 90%;
+    }
+    section {
+        justify-content: flex-start;
+    }
+
+    .main {
         margin-bottom: 25px;
+        margin-top: 180px;
     }
-    .nav__moment{
-        font-size: 12px;
+
+    .nav__moment {
+        font-size: 7px;
     }
-    .nav__main a, .nav__main p{
-        font-size: 22px;
+    .nav__main{
+        width: 120%
+    }
+    .nav__main a, .nav__main p {
+        font-size: 24px;
         text-align: center;
+        line-height: 30px;
     }
-    .nav__main .nav__main__produkcja{
+
+    .nav__main .nav__main__produkcja {
         min-width: 241px;
     }
-    .nav__second a{
-        font-size: 18px;
-        text-align: center;
+
+    .nav__second {
+        margin-top: 20px;
     }
-    .nav__third a{
-        font-size: 14px;
+
+    .nav__second a {
+        font-size: 13px;
         text-align: center;
+        line-height: 17px;
     }
-    .contact__mobi__biuro h4, .contact__mobi__manager h4, .contact__mobi__projektant h4 {
+
+    .nav__third a, .nav__third p {
+        font-size: 9px;
+        text-align: center;
+        line-height: 13px;
+    }
+
+    .buttons__portfolio__mobi {
+        margin: 0 0 30px 0;
+        height: 30px;
+        width: 150px;
         font-size: 10px;
     }
+
+    .buttons__katalog, .buttons__regulamin {
+        font-size: 8px;
+        height: 25px;
+        width: 100px;
+        min-width: 100px;
+    }
+
+    .contact__mobi__biuro h4, .contact__mobi__manager h4, .contact__mobi__projektant h4 {
+        font-size: 9px;
+    }
+
     .contact__mobi {
         min-width: 285px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        justify-content: space-between;
     }
+
     .contact__mobi__biuro a, .contact__mobi__manager a, .contact__mobi__projektant a {
-        font-size: 8px;
+        font-size: 7px;
+    }
+    .mobiFb img {
+        width: 15%;
     }
 }
