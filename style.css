@@ -12,6 +12,54 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+.start{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00E6E9;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: 1s;
+    transform: scale(1);
+}
+
+.maximize{
+    opacity: 0;
+    transform: scale(10);
+}
+
+.out{
+    display: none;
+}
+
+.logoStart{
+    width: 250px;
+    animation: start 3s ease-in-out ;
+}
+
+@keyframes start {
+    0%{
+        transform: scale(1);
+    }
+    10%{
+        transform: scale(0.8);
+    }
+    20%{
+        transform: scale(1);
+    }
+    30%{
+        transform: scale(0.8);
+    }
+    40%{
+        transform: scale(1);
+    }
 }
 
 section {
