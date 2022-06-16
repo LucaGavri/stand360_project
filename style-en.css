@@ -276,18 +276,8 @@ section {
 }
 
 @media screen and (max-width: 1240px) {
-    .header {
-        position: absolute;
-    }
-    .header__languageFb__pl, .header__languageFb__pl{
-        margin-bottom: 15px;
-    }
-    .header__languageFb__fb{
-        margin-top: 0;
-    }
+
     section {
-        margin: 10px;
-        background-position-x: center;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -395,34 +385,38 @@ section {
     }
 }
 
-@media screen and (max-width: 540px){
-    .main{
+@media screen and (max-width: 540px) {
+    .main {
         margin-bottom: 25px;
     }
-    .nav__moment{
-        font-size: 12px;
-    }
-    .nav__main a, .nav__main p{
+
+    .nav__main a {
         font-size: 22px;
         text-align: center;
     }
-    .nav__main .nav__main__produkcja{
+
+    .nav__main .nav__main__produkcja {
         min-width: 241px;
     }
-    .nav__second a{
+
+    .nav__second a {
         font-size: 18px;
         text-align: center;
     }
-    .nav__third a{
+
+    .nav__third a {
         font-size: 14px;
         text-align: center;
     }
+
     .contact__mobi__biuro h4, .contact__mobi__manager h4, .contact__mobi__projektant h4 {
         font-size: 10px;
     }
+
     .contact__mobi {
-        min-width: 285px;
+        min-width: 300px;
     }
+
     .contact__mobi__biuro a, .contact__mobi__manager a, .contact__mobi__projektant a {
         font-size: 8px;
     }
